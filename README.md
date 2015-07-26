@@ -30,12 +30,12 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/sty
 1. in Redmine Administration
 
     * set the default theme to "redmine-pepper-theme"
-    * have only one queue (Tasks)
-    * only two task states (Open/Closed)
+    * have only one queue (Issues)
+    * only two issue states (Open/Closed)
     * two roles (Worker, Project Manager)
     * permissions for everything (except for creating/deleting top-level projects in case of "Worker" and except for "Create private notes" for anyone)
     * make as few fields visible as possible (e.g. no queue, no category, no version, etc.)
-    * default columns in project tasks list: task numerical id, task name, assignee, date of completion, state, priority
+    * default columns in project issues list: issue numerical id, issue name, assignee, date of completion, state, priority
     * text syntax "Redmine Markdown"
 
 ### Maintenance
