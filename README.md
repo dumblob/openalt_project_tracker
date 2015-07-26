@@ -1,4 +1,4 @@
-# OpenAlt z. s. issue tracking system
+# OpenAlt z. s. project tracking system
 
 Currently a slightly modified Redmine instance is used. The goal is to have as minimal and clean-looking system as possible.
 
