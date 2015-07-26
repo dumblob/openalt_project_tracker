@@ -2,6 +2,11 @@
 
 Currently a slightly modified Redmine instance is used. The goal is to have as minimal and clean-looking system as possible.
 
+![screenshot00](2015-07-26-190703_1680x1050+0+0_imlib2_grab.png)
+![screenshot01](2015-07-26-190752_1680x1050+0+0_imlib2_grab.png)
+![screenshot02](2015-07-26-190834_1680x1050+0+0_imlib2_grab.png)
+![screenshot03](2015-07-26-191313_1680x1050+0+0_imlib2_grab.png)
+
 ### Steps to reproduce the Redmine setup:
 
 1. setup SQL DB
