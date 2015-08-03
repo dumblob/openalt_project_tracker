@@ -43,6 +43,12 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/sty
     * default columns in project issues list: issue numerical id, issue name, assignee, date of completion, state, priority
     * text syntax "Redmine Markdown"
 
+### TODO
+
+* find commonmark/markdown edit live preview module
+* make the empty vertical space between the top bar and search bar much smaller
+* remove the huge issue type (e.g. "Issue") + id (e.g. " #3494") from the page and add the id to the issue name instead
+
 ### Maintenance
 
 * uninstall plugins
