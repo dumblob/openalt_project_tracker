@@ -48,6 +48,7 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/sty
 * find commonmark/markdown edit live preview module
 * make the empty vertical space between the top bar and search bar much smaller
 * remove the huge issue type (e.g. "Issue") + id (e.g. " #3494") from the page and add the id to the issue name instead
+* remove user queries (they remained in the DB after some plugin)
 
 ### Maintenance
 
