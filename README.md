@@ -64,3 +64,4 @@ rm -r plugins/plugin_name/
 ### Usage
 
 * do NOT use "URL" field in project settings (it looks ugly on the project dashboard) and use the description text field instead
+* do NOT use Redmine groups, but rather special users reprezenting a group (because such *group user* has usually some mailing list email address and therefore lots of duplicate work is avoided and also in mailing lists, there are usually more people than in Redmine)
