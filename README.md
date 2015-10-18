@@ -43,6 +43,11 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/sty
     * default columns in project issues list: issue numerical id, issue name, assignee, date of completion, state, priority
     * text syntax "Redmine Markdown"
 
+1. in each project
+
+    * make everything public and switch off all plugins/extensions except for issues
+    * create a subproject with the same name and postfix *" - private"* and switch on the *wiki* and *files* plugins
+
 ### TODO
 
 * find commonmark/markdown edit live preview module
