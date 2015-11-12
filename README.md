@@ -66,6 +66,13 @@ rm -r plugins/plugin_name/
 /etc/init.d/apache2 restart  # or nginx restart
 ~~~~
 
+* backup DB
+
+    ~~~~sh
+# ask for password
+mysqldump --skip-extended-insert --compact -u UserName -p --default-character-set utf8 internal_db_name > dump00.sql
+~~~~
+
 ### Usage
 
 * do NOT use "URL" field in project settings (it looks ugly on the project dashboard) and use the description text field instead
