@@ -54,6 +54,7 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/sty
 * make the empty vertical space between the top bar and search bar much smaller
 * remove the huge issue type (e.g. "Issue") + id (e.g. " #3494") from the page and add the id to the issue name instead
 * remove user queries (they remained in the DB after some plugin)
+* try plugins: marius-balteanu/redmine-theme-gitmike, marius-balteanu/redmine_mention_plugin, marius-balteanu/redmine_autostatus, marius-balteanu/redmine_new_issue_view
 
 ### Maintenance
 
