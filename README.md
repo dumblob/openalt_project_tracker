@@ -45,7 +45,7 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/sty
 
 1. in each project
 
-    * make everything public and switch off all plugins/extensions except for issues
+    * make everything public and switch off all plugins/extensions except for *issues*
     * create a subproject with the same name and postfix *" - private"* and switch on the *wiki* and *files* plugins
 
 ### TODO
@@ -77,4 +77,4 @@ mysqldump --skip-extended-insert --compact -u UserName -p --default-character-se
 ### Usage
 
 * do NOT use "URL" field in project settings (it looks ugly on the project dashboard) and use the description text field instead
-* do NOT use Redmine groups, but rather special users reprezenting a group (because such *group user* has usually some mailing list email address and therefore lots of duplicate work is avoided and also in mailing lists, there are usually more people than in Redmine)
+* do NOT use Redmine groups, but rather special users representing a group (because such *group user* has usually some mailing list email address and therefore lots of duplicate work is avoided and also in mailing lists, there are usually more people than in Redmine)
