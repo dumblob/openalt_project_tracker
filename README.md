@@ -78,3 +78,4 @@ mysqldump --skip-extended-insert --compact -u UserName -p --default-character-se
 
 * do NOT use "URL" field in project settings (it looks ugly on the project dashboard) and use the description text field instead
 * do NOT use Redmine groups, but rather special users representing a group (because such *group user* has usually some mailing list email address and therefore lots of duplicate work is avoided and also in mailing lists, there are usually more people than in Redmine)
+* create a default query which shows all tasks in a tree and make sure, that only leafs are tasks to be done (in other words, the tree should be a WBS where non-leaf nodes only describe their siblings and can't be procured themself in comparison to their siblings) - so the nodes will become general descriptions (meta information about the actual work to be done) and leafs the actual implementation (the work to be done in the form of tasks)
