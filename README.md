@@ -13,21 +13,21 @@ Currently a slightly modified Redmine instance is used. The goal is to have as m
 1. [install current Redmine 3.x](http://www.redmine.org/projects/redmine/wiki/redmineinstall) and setup the SQL DB backend (FIXME: how to migrate existing Redmine DB?)
 1. install Redmine plugins `redmine_auto_watchers` `redmine_drafts` and theme `redmine-pepper-theme`
 
-    ~~~~sh
-RM_INS='/usr/local/lib/redmine'
-cd "$RM_INS"/plugins/ && git clone --depth 1 https://github.com/thegcat/redmine_auto_watchers
-cd "$RM_INS"/plugins/ && git clone --depth 1 https://github.com/jbbarth/redmine_drafts.git
+~~~~sh
+RM='/usr/local/lib/redmine'
+cd "$RM"/plugins/ && git clone --depth 1 https://github.com/thegcat/redmine_auto_watchers
+cd "$RM"/plugins/ && git clone --depth 1 https://github.com/jbbarth/redmine_drafts.git
 # plugins require "migration"
-cd "$RM_INS" && rake redmine:plugins:migrate RAILS_ENV=production
+cd "$RM" && rake redmine:plugins:migrate RAILS_ENV=production
 # themes require only web server restart
-cd "$RM_INS"/public/themes/ && git clone --depth 1 https://github.com/koppen/redmine-pepper-theme.git
+cd "$RM"/public/themes/ && git clone --depth 1 https://github.com/koppen/redmine-pepper-theme.git
 
 # make the text field visible (without clicking on the tiny icon and with more lines of text shown)
-cp ~/redmine_setup_howto/app/views/issues/_form.html.erb "$RM_INS"/app/views/issues/
+cp ~/redmine_setup_howto/app/views/issues/_form.html.erb "$RM"/app/views/issues/
 # change subjects of all emails to "#ID Issue full name", exchange the issue description for the change diff
-cp ~/redmine_setup_howto/app/models/mailer.rb "$RM_INS"/app/models/
+cp ~/redmine_setup_howto/app/models/mailer.rb "$RM"/app/models/
 # make the dotted line in history being above each of the records, not below
-cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM_INS"/public/stylesheets/
+cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM"/public/stylesheets/
 
 /etc/init.d/apache2 restart  # or nginx restart
 ~~~~
