@@ -13,7 +13,7 @@ Currently a slightly modified Redmine instance is used. The goal is to have as m
 1. [install current Redmine 3.x](http://www.redmine.org/projects/redmine/wiki/redmineinstall) and setup the SQL DB backend (FIXME: how to migrate existing Redmine DB?)
 1. install Redmine plugins `redmine_auto_watchers` `redmine_drafts` and theme `redmine-pepper-theme`
 
-~~~~sh
+```sh
 RM='/usr/local/lib/redmine'
 cd "$RM"/plugins/ && git clone --depth 1 https://github.com/thegcat/redmine_auto_watchers
 cd "$RM"/plugins/ && git clone --depth 1 https://github.com/jbbarth/redmine_drafts.git
@@ -30,7 +30,7 @@ cp ~/redmine_setup_howto/app/models/mailer.rb "$RM"/app/models/
 cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM"/public/stylesheets/
 
 /etc/init.d/apache2 restart  # or nginx restart
-~~~~
+```
 
 1. in Redmine Administration
 
@@ -60,22 +60,22 @@ cp ~/redmine_setup_howto/public/stylesheets/application.css "$RM"/public/stylesh
 
 * uninstall plugins
 
-    ~~~~sh
+```sh
 cd /usr/local/lib/redmine/
 rake redmine:plugins:migrate NAME=plugin_name VERSION=0 RAILS_ENV=production
 rm -r plugins/plugin_name/
 /etc/init.d/apache2 restart  # or nginx restart
-~~~~
+```
 
 * backup DB
 
-    ~~~~sh
+```sh
 # ask for password
 mysqldump --skip-extended-insert --compact -u UserName -p --default-character-set utf8 internal_db_name > dump00.sql
-~~~~
+```
 
 ### Usage
 
 * do NOT use "URL" field in project settings (it looks ugly on the project dashboard) and use the description text field instead
 * do NOT use Redmine groups, but rather special users representing a group (because such *group user* has usually some mailing list email address and therefore lots of duplicate work is avoided and also in mailing lists, there are usually more people than in Redmine)
-* create a default query which shows all tasks in a tree and make sure, that only leafs are tasks to be done (in other words, the tree should be a WBS where non-leaf nodes only describe their siblings and can't be procured themself in comparison to their siblings) - so the nodes will become general descriptions (meta information about the actual work to be done) and leafs the actual implementation (the work to be done in the form of tasks)
+* create a default query which shows all tasks in a tree and make sure, that only leafs are tasks to be done (in other words, the tree should be a WBS where non-leaf nodes only describe their children and can't be worked off per se in contrast to their children) - so the nodes will become general descriptions (meta information about the actual work to be done) and leafs the actual implementation (the work to be done in the form of tasks)
